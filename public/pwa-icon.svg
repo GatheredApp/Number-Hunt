@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Number Hunt target tile</title>
+  <defs>
+    <linearGradient id="tile" x1="96" y1="64" x2="424" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffca3a"/>
+      <stop offset="1" stop-color="#ef5938"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#11172a"/>
+  <rect x="72" y="72" width="368" height="368" rx="104" fill="url(#tile)"/>
+  <circle cx="256" cy="256" r="112" fill="none" stroke="#172039" stroke-width="34"/>
+  <circle cx="256" cy="256" r="30" fill="#172039"/>
+  <path d="M256 80v64M256 368v64M80 256h64M368 256h64" fill="none" stroke="#172039" stroke-linecap="round" stroke-width="34"/>
+</svg>
