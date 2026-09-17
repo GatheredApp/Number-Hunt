@@ -32,4 +32,4 @@ Daily Hunt hashes the local calendar date into a seeded PRNG, so the target and 
 
 ## PWA and deployment
 
-`vite-plugin-pwa` generates the manifest and Workbox service worker. The app shell and game assets are cached for offline play, update availability is surfaced in-app, and install prompts are captured where supported. Vite's production base is `/Number-Hunt/` for GitHub Pages. `.github/workflows/deploy.yml` tests, type-checks, lints, builds, and deploys `dist` using the official Pages actions.
+`vite-plugin-pwa` generates the manifest and Workbox service worker. The app shell and game assets are cached for offline play, update availability is surfaced in-app, and install prompts are captured where supported. Vite's production base is `/Number-Hunt/` for GitHub Pages. `.github/workflows/deploy.yml` is the single Pages workflow: it tests, type-checks, lints, builds, and deploys only the generated `dist` directory using the official Pages actions. Do not also enable GitHub's starter "Deploy static content" workflow, because that publishes the unbuilt TypeScript source instead of the Vite output.
