@@ -1,0 +1,2 @@
+import{beforeEach,expect,it}from'vitest';import{defaults,load}from'.';
+beforeEach(()=>{const memory=new Map<string,string>();Object.defineProperty(globalThis,'localStorage',{configurable:true,value:{getItem:(k:string)=>memory.get(k)??null,setItem:(k:string,v:string)=>memory.set(k,v)}})});it('restores defaults after corruption',()=>{localStorage.setItem('number-hunt:v1','broken');expect(load()).toEqual(defaults)});
